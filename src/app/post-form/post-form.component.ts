@@ -7,7 +7,7 @@ import { Post } from '../interfaces/post';
   styleUrls: ['./post-form.component.css']
 })
 export class PostFormComponent implements OnInit {
-  @Output() submit:EventEmitter = new EventEmitter<Post>();
+  @Output() submit = new EventEmitter<Post>();
 
   constructor() { }
 
@@ -16,13 +16,15 @@ export class PostFormComponent implements OnInit {
 
   toot:Post = {
     title: '',
-    thought: ''
+    thought: '',
+    votes: 0
   }
 
   submitPost():void {
     let outboundToot:Post = {
       title: this.toot.title,
-      thought: this.toot.thought
+      thought: this.toot.thought,
+      votes: 0
     }
     this.submit.emit(outboundToot);
 
