@@ -14,14 +14,17 @@ export class SocialPostsComponent implements OnInit {
   }
 
   posts:Post[] = [
-   { title: 'first', thought: 'Really? were you expecting better? Shame' },
-   { title: 'Second', thought: 'Ok, I do have thoughts some times' },
-   { title: 'Where is My Mind', thought: 'See Trash Fires' },
+   { title: 'first', thought: 'Really? were you expecting better? Shame', votes: 2 },
+   { title: 'Second', thought: 'Ok, I do have thoughts some times', votes: 0 },
+   { title: 'Where is My Mind', thought: 'See Trash Fires' , votes : 0 },
   ]
 
-  addPost(post:Post) {
-    console.log(post);
+  onSubmit(post:Post) {
     this.posts.unshift(post);
+  }
+
+  onDelete(post:Post) {
+    this.posts = this.posts.filter( p => p != post);
   }
 
 }

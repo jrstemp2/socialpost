@@ -1,4 +1,6 @@
 <div style="border: 1px solid salmon">
 <strong>{{ post.title }}</strong>
 <p>{{ post.thought }}</p>
+<p>{{ post.votes }}</p> <input type="button" value="Like Me!" (click)="addUpVote()" />
+<input type="button" value="X" (click)="deletePost()" />
 </div>
