@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ɵisBoundToModule__POST_R3__ } from '@angular/core';
 import { Post } from '../interfaces/post';
 
 @Component({
@@ -21,6 +21,10 @@ export class PostFormComponent implements OnInit {
   }
 
   submitPost():void {
+    // verify valid toot! 
+    if (this.toot.title == '' || this.toot.thought == '') return;
+    
+
     let outboundToot:Post = {
       title: this.toot.title,
       thought: this.toot.thought,

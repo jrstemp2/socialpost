@@ -13,8 +13,9 @@ export class SocialPostsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+    // mock data
   posts:Post[] = [
-   { title: 'first', thought: 'Really? were you expecting better? Shame', votes: 2 },
+   { title: 'First', thought: 'Really? were you expecting better? Shame', votes: 2 },
    { title: 'Second', thought: 'Ok, I do have thoughts some times', votes: 0 },
    { title: 'Where is My Mind', thought: 'See Trash Fires' , votes : 0 },
   ]

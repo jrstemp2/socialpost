@@ -1,7 +1,6 @@
-<strong>Title:</strong>
-<input type="text" [(ngModel)]="toot.title" />
-<br />
-<strong>Thought:</strong>
-<input type="text" [(ngModel)]="toot.thought" />
-<br />
-<input type="button" value="Send Toot!" (click)="submitPost()" />
+<div class="post-form-container">
+    <p> Make a new toot here: </p>
+    <input type="text" placeholder="Toot title here" [(ngModel)]="toot.title" />
+    <textarea [(ngModel)]="toot.thought" placeholder="enter thoughts here" (keypress.enter)="submitPost()"></textarea>
+    <input class="button" type="button" value="Toot!" (click)="submitPost()" rows="5" cols="50" />
+</div>

@@ -1,0 +1,16 @@
+.social-posts-container {
+    color: #E8A87C;
+    background-color: #022140;
+    width: 80%;
+    margin: 3em auto;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    padding: 1em;
+}
+
+h1 {
+    margin: 1em auto;
+    text-align: center;
+    text-emphasis: bold;
+    font-size: xx-large;
+}
